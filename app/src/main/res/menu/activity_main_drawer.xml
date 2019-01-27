@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="Categories">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_chrome_reader_mode_black_24dp"
+                android:title="Latest News" />
+            <item
+                android:id="@+id/nav_international"
+                android:icon="@drawable/ic_account_balance_black_24dp"
+                android:title="International"
+                />
+            <item
+                android:id="@+id/nav_business"
+                android:icon="@drawable/ic_business_center_black_24dp"
+                android:title="Buiness" />
+            <item
+                android:id="@+id/nav_entertainment"
+                android:icon="@drawable/ic_movie_black_24dp"
+                android:title="Entertainment" />
+            <item
+                android:id="@+id/nav_health"
+                android:icon="@drawable/ic_local_hospital_black_24dp"
+                android:title="Health" />
+            <item
+                android:id="@+id/nav_Science"
+                android:icon="@drawable/ic_camera_black_24dp"
+                android:title="Science" />
+            <item
+                android:id="@+id/nav_sports"
+                android:icon="@drawable/ic_pool_black_24dp"
+                android:title="Sports" />
+            <item
+                android:id="@+id/nav_technology"
+                android:icon="@drawable/ic_phonelink_black_24dp"
+                android:title="Technology" />
+        </menu>
+    </item>
+
+</menu>

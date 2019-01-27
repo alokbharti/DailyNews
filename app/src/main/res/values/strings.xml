@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DailyNews</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">DailyNews</string>
+    <string name="nav_header_subtitle">contactus@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Contact Us</string>
+</resources>
