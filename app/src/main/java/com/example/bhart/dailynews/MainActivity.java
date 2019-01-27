@@ -146,20 +146,21 @@ public class MainActivity extends AppCompatActivity
         //Getting user's location
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
+        //checking user's gps is on or off
+        boolean gps_enabled = false;
+
+        try {
+            gps_enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+            if(!gps_enabled){
+                Toast.makeText(MainActivity.this,"Your gps is off, turn on to check latest news",Toast.LENGTH_LONG).show();
+                return;
+            }
+        } catch(Exception ex) {}
+
+
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-
-                //checking user's gps is on or off
-                boolean gps_enabled = false;
-
-                try {
-                    gps_enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
-                    if(!gps_enabled){
-                        Toast.makeText(MainActivity.this,"gps is off",Toast.LENGTH_LONG).show();
-                        return;
-                    }
-                } catch(Exception ex) {}
 
                 Geocoder geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
 
