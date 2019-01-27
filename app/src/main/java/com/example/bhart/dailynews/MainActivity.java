@@ -18,6 +18,7 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -144,9 +145,21 @@ public class MainActivity extends AppCompatActivity
 
         //Getting user's location
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
+
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
+
+                //checking user's gps is on or off
+                boolean gps_enabled = false;
+
+                try {
+                    gps_enabled = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);
+                    if(!gps_enabled){
+                        Toast.makeText(MainActivity.this,"gps is off",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                } catch(Exception ex) {}
 
                 Geocoder geocoder = new Geocoder(MainActivity.this, Locale.getDefault());
 

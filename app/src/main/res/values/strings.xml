@@ -6,4 +6,6 @@
     <string name="nav_header_subtitle">contactus@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Contact Us</string>
+    <string name="gps_network_not_enabled">Your gps is not enabled</string>
+    <string name="open_location_settings">open your gps</string>
 </resources>
