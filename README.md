@@ -10,3 +10,5 @@ It's a news app which has these features:
 - Stores data in the cache (in case a user is offline and wants to use) App size is small.
 
 News Data are taken from newsapi.org(https://newsapi.org/)
+
+P.S.: Be sure your gps is on while using this app
